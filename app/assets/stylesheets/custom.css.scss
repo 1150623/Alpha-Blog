@@ -35,7 +35,34 @@ $navbar-default-bg: #313131;
 
 .btn-default {
     color: #d4d4d4;
-    border: 2px solid #535353;
+    border: 2px solid #2e2e2e62;
+}
+.btn-default:hover {
+    color: #ffffff;
+    background-color: #474747;
+    border: 2px solid #1b1b1b;
+}
+
+.btn-danger {
+    color: #d4d4d4;
+    background-color: #d62b1f62;
+}
+
+.btn-danger:hover {
+    color: #ffffff;
+    background-color: #c73a3a;
+    border: 2px solid #a30b00;
+}
+
+.btn-success {
+    color: #ffffff;
+    background-color: #339b1962;
+}
+
+.btn-success:hover {
+    color: #ffffff;
+    background-color: #39801ad7;
+    border: 2px solid #116600;
 }
 
 footer {
@@ -58,4 +85,14 @@ footer ul{
 footer ul li{
     float: left;
     margin-left: 15px;
+}
+
+
+.article_actions {
+    border-top: 1px solid #5a5a5a;
+    padding-top: 45px;
+}
+
+.description {
+    margin-top: 0;
 }

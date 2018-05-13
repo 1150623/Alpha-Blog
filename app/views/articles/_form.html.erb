@@ -1,12 +1,6 @@
-<% if @article.errors.any? %>
-  <h2>The following errors prevented the article from getting created</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
 
+
+<%= render 'shared/errors', obj: @article%>
 
 <div class='row'>
   <div class='col-xs-12'>
@@ -34,13 +28,13 @@
 
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-8">
-          <%= f.submit class: "btn btn-black btn-lg" %>
+          <%= f.submit class: "btn btn-success btn-lg" %>
         </div>
       </div>
 
     <% end %>
     <div class = "col-xs-4 col-xs-offset-4">
-      [<%= link_to 'Cancel', articles_path %>]
+      [<%= link_to 'Cancel and return to article listing', articles_path %>]
     </div>  
   </div>
 </div>
