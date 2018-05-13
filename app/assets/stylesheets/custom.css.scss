@@ -1,0 +1,61 @@
+
+$navbar-default-bg: #313131;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+    float: left;
+    font-size: 16;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+#jumbotron_home_page {
+    //background-color: #a8a8a8;
+    color: #474747;
+    background-image: asset-url('background.jpg');
+    background-size: cover;
+}
+
+#jumbotron_home_page h1 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn-default {
+    color: #d4d4d4;
+    border: 2px solid #535353;
+}
+
+footer {
+    margin-top: 50px;
+    padding-top: 5px;
+    border-top: 1px solid #313131;
+    color: #777;
+}
+
+footer small{
+    float: left;
+}
+
+
+footer ul{
+    float: right;
+    list-style: none;
+}
+
+footer ul li{
+    float: left;
+    margin-left: 15px;
+}
