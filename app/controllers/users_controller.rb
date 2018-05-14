@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   end
 
   def require_author
-    if current_user != @user and !current_user.admin?)
+    if current_user != @user && !current_user.admin?
       flash[:danger] = "You can only edit or delete your information."
       redirect_to root_path
     end
