@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-
+  before_action :set_user, only: [:edit, :update, :show]
+  before_action :require_user, except: [:show]
+  before_action :require_author, only: [:edit, :update]
   def index
     @users = User.paginate(page: params[:page], per_page: 5)
   end
@@ -18,12 +20,10 @@ class UsersController < ApplicationController
 
   end
 
-  def edit
-    @user = User.find(params[:id])
+  def edit    
   end
 
   def update 
-    @user = User.find(params[:id])
     if @user.update(user_params)
       flash[:success] = "Your Account details were updated successfully!"
     else
@@ -32,7 +32,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
     @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
   end
 
@@ -41,4 +40,14 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :email, :password)
   end
 
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def require_author
+    if current_user != @user
+      flash[:danger] = "You can only edit or delete your information."
+      redirect_to root_path
+    end
+  end
 end
