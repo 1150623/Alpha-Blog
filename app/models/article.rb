@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   belongs_to :user
-  has_many :aticle_categories
+  has_many :article_categories
   has_many :categories, through: :article_categories
   # presence -> Must not be nil
   # length -> must be of length x

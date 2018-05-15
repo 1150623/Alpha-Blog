@@ -127,10 +127,15 @@ footer ul li{
     background-color: #b4b4b4;
     color: #202020;
     font-weight: bold;
-    letter-spacing: -1px;
+    //letter-spacing: -1px;
     text-transform: uppercase;
 }
 
 .input_checkbox {
     width: auto !important;
+}
+
+.spaced {
+    margin-top: 5px;
+    margin-bottom: 30px;
 }

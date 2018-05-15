@@ -22,7 +22,7 @@
   <hr>
   <%= simple_format(@article.description) %>
   <p> Categories:
-  <% if article.categories.any? %>
+  <% if @article.categories.any? %>
      <%= render @article.categories %>
   <% else %>
     <small> none. </small>
